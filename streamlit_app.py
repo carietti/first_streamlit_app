@@ -41,10 +41,8 @@ streamlit.text(my_data_row)
 
 #retrieve fruit list
 my_cur.execute("select * from pc_rivery_db.public.fruit_load_list")
-my_data_row = my_cur.fetchone()
+#my_data_row = my_cur.fetchone() -- read the first row
+my_data_row = my_cur.fetchall()
 
 streamlit.header("The fruit list contains:")
-streamlit.text(my_data_row)
-
-my_data_row = my_cur.fetchall()
 streamlit.text(my_data_row)
