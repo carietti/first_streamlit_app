@@ -40,7 +40,7 @@ my_data_row = my_cur.fetchone()
 streamlit.text(my_data_row)
 
 #retrieve fruit list
-my_cur.execute("select Fruit_Name from pc_rivery_db.public.fruit_load_list order by 1")
+my_cur.execute("select Fruit_Name from pc_rivery_db.public.fruit_load_list order by Fruit_Name")
 #my_data_row = my_cur.fetchone() -- read the first row
 my_data_row = my_cur.fetchall()
 
