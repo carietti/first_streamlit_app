@@ -45,4 +45,5 @@ my_cur.execute("select Fruit_Name from pc_rivery_db.public.fruit_load_list order
 my_data_row = my_cur.fetchall()
 
 streamlit.header("The fruit list contains:")
-streamlit.dataframe(my_data_row)
+fruits_normalized = pandas.json_normalize(my_data_row.json())
+streamlit.dataframe(fruits_normalized)
