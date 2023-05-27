@@ -22,7 +22,8 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 streamlit.dataframe(fruits_to_show)
 
 try:
-    fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
+    #fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi') -- preloaded with Kiwi
+    fruit_choice = streamlit.text_input('What fruit would you like information about?')
     if not fruit_choice: streamlit.error('Please select a fruit to get information')
     else: 
       streamlit.header("Fruityvice Fruit Advice!")
